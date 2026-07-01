@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:#ffffff;
+    color:#1E3A8A;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
+    position:sticky;
+    top:0;
+    border-bottom:1px solid #eee;
+}
+
+.logo h2{
+    color:#16A34A;
+    font-size:28px;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#1E3A8A;
+    font-weight:600;
+}
+
+.hero{
+    padding:80px 8%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:22px;
+    color:#555;
+    max-width:700px;
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.primary{
+    background:#16A34A;
+    color:white;
+    text-decoration:none;
+    padding:18px 32px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+.secondary{
+    border:2px solid #1E3A8A;
+    color:#1E3A8A;
+    text-decoration:none;
+    padding:18px 32px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+.primary:hover{
+    background:#13803A;
+}
+
+.secondary:hover{
+    background:#1E3A8A;
+    color:white;
+}
+
+@media (max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero{
+    padding:50px 25px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+.primary,
+.secondary{
+    width:100%;
+    text-align:center;
+}
+.logo img{
+    width:180px;
+    height:auto;
+    display:block;
+}
+.brand-logo{
+    width:180px;
+    max-width:100%;
+    height:auto;
+}
+}
