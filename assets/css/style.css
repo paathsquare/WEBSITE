@@ -132,4 +132,41 @@ nav{
     max-width:100%;
     height:auto;
 }
+.stats{
+
+display:flex;
+justify-content:center;
+gap:80px;
+
+padding:70px 20px;
+
+background:#F8FBFF;
+
+flex-wrap:wrap;
+
+}
+
+.stat{
+
+text-align:center;
+
+}
+
+.stat h2{
+
+font-size:42px;
+
+color:#1E3A8A;
+
+margin-bottom:10px;
+
+}
+
+.stat p{
+
+color:#555;
+
+font-size:18px;
+
+}
 }
