@@ -1,0 +1,23 @@
+[
+  {
+    "name": "CBC",
+    "price": 250,
+    "sample": "Whole Blood (EDTA)",
+    "fasting": "Not Required",
+    "report": "Same Day"
+  },
+  {
+    "name": "HbA1c",
+    "price": 450,
+    "sample": "Whole Blood",
+    "fasting": "Not Required",
+    "report": "Same Day"
+  },
+  {
+    "name": "Vitamin D",
+    "price": 1200,
+    "sample": "Serum",
+    "fasting": "Not Required",
+    "report": "Next Day"
+  }
+]
