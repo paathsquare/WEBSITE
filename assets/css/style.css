@@ -13,29 +13,88 @@ body{
 /* HEADER */
 
 header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
+
+    padding:18px 8%;
+
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+
     border-bottom:1px solid #eee;
-    background:white;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.04);
 }
 
 
 .logo img{
-    width:180px;
-    display:block;
+    height:78px;
+    width:auto;
 }
 
 nav{
     display:flex;
-    gap:30px;
+    justify-content:center;
+    align-items:center;
+
+    flex:1;
+
+    gap:22px;
 }
 
 nav a{
     text-decoration:none;
     color:#163A8A;
     font-weight:600;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:#16A34A;
+}
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.call-btn{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    white-space:nowrap;
+
+    text-decoration:none;
+    color:#163A8A;
+    font-weight:600;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.book-btn{
+    background:#163A8A;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.book-btn:hover{
+    background:#16A34A;
 }
 
 /* HERO */
@@ -228,7 +287,10 @@ nav a{
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:900px){.header-actions{
+    flex-wrap:wrap;
+    justify-content:center;
+}
 
 header{
 
