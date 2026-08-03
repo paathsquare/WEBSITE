@@ -1,25 +1,3 @@
-let tests = [];
-
-async function loadTests() {
-    try {
-        const response = await fetch("data/tests.json");
-
-        if (!response.ok) {
-            throw new Error("Unable to load tests.json");
-        }
-
-        tests = await response.json();
-
-        return tests;
-    } catch (error) {
-        console.error(error);
-        return [];
-    }
-}
-
-window.loadTests = loadTests;
-window.tests = tests;
-
 // Smooth scrolling for internal links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function (e) {
