@@ -1,11 +1,10 @@
 
-
-let tests = [];
+let searchTests = [];
 
 async function loadTests() {
     try {
         const response = await fetch('data/tests.json');
-        tests = await response.json();
+        searchTests = await response.json();
     } catch (err) {
         console.error('Unable to load tests:', err);
         return;
@@ -28,7 +27,7 @@ function setupSearch() {
             return;
         }
 
-        const matches = tests.filter(test =>
+        const matches = searchTests.filter(test =>
             (test.name || '').toLowerCase().includes(query)
         );
 
