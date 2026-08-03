@@ -1,54 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ☰
+    </button>
+    <nav id="mainNav">
+        <!-- Navigation links here -->
+    </nav>
+</header>
 
-let searchTests = [];
+<!-- Other content -->
 
-async function loadTests() {
-    try {
-        const response = await fetch('data/tests.json');
-        searchTests = await response.json();
-    } catch (err) {
-        console.error('Unable to load tests:', err);
-        return;
-    }
+<!-- Existing script tags -->
+<script src="assets/js/search.js"></script>
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
 
-    setupSearch();
-}
-
-function setupSearch() {
-    const input = document.getElementById('searchInput');
-    const results = document.getElementById('results');
-
-    if (!input || !results) return;
-
-    input.addEventListener('input', () => {
-        const query = input.value.trim().toLowerCase();
-
-        if (query.length === 0) {
-            results.innerHTML = '';
-            return;
-        }
-
-        const matches = searchTests.filter(test =>
-            (test.name || '').toLowerCase().includes(query)
-        );
-
-        if (matches.length === 0) {
-            results.innerHTML = '<p>No matching tests found.</p>';
-            return;
-        }
-
-        results.innerHTML = matches.map(test => `
-    <div class="search-result">
-        <div>
-            <strong>${test.name}</strong>
-            <div style="margin-top:6px;color:#666;font-size:14px;">Blood Test</div>
-        </div>
-        <div style="text-align:right;">
-            <div style="font-size:22px;font-weight:700;color:#16A34A;">₹${test.price ?? '-'}</div>
-            <a href="https://wa.me/919622170122?text=I%20want%20to%20book%20${encodeURIComponent(test.name)}" target="_blank" style="display:inline-block;margin-top:10px;padding:8px 14px;background:#16A34A;color:#fff;text-decoration:none;border-radius:8px;font-size:14px;">Book Test</a>
-        </div>
-    </div>
-`).join('');
+if(menuToggle && mainNav){
+    menuToggle.addEventListener('click',()=>{
+        mainNav.classList.toggle('open');
     });
 }
-
-loadTests();
+</script>
+</body>
+</html>
