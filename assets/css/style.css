@@ -641,46 +641,38 @@ nav{
 
 #results{
     margin-top:30px;
+    display:grid;
+    gap:18px;
 }
 
-.result-card{
+.search-result{
     background:#fff;
-    border-radius:18px;
-    padding:30px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    text-align:left;
-    margin-bottom:20px;
-    animation:fade .25s ease;
+    border-radius:16px;
+    padding:22px 24px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-left:5px solid #16A34A;
 }
 
-.result-card h3{
+.search-result strong{
     color:#163A8A;
-    font-size:30px;
-    margin-bottom:10px;
+    font-size:20px;
 }
 
-.result-card h2{
+.search-result{
+    font-size:18px;
     color:#16A34A;
-    margin-bottom:20px;
+    font-weight:700;
 }
 
-.result-card p{
-    margin:8px 0;
-    color:#555;
-}
-
-@keyframes fade{
-
-    from{
-        opacity:0;
-        transform:translateY(10px);
+@media(max-width:768px){
+    .search-result{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
     }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
 }
 
 /* WHY US */
