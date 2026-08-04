@@ -21,7 +21,7 @@
 <button id="menuToggle" class="menu-toggle" aria-label="Open Menu">
     ☰
 </button>
-    <nav>
+    <nav id="mainNav">
 
         <a href="#top">Home</a>
         <a href="#search">Tests</a>
@@ -461,7 +461,16 @@
 </div>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/search.js"></script>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
 
+if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+        mainNav.classList.toggle("open");
+    });
+}
+</script>
 </body>
 
 </html>
